@@ -1,21 +1,18 @@
-
-from openai import OpenAI
 import base64
 import json
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
+from openai import OpenAI
 
 load_dotenv()
 api_key = os.getenv("OPEN_AI_KEY")
 client = OpenAI(api_key=api_key)
-
 
 ops = {
     "CLOSE": " I sent an image to you because I was close to something, start this conversation out with 'Watch out!'",
     "PERSON": "I send an image to you because I'm talking to someone, and I want you to describe what they are wearing",
     "TEXT": "DESCRIBE"
 }
-
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
