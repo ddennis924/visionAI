@@ -49,4 +49,4 @@ if __name__ == "__main__":
     image_path = "close.png"
     op = "CLOSE"
     caption = assist(image_path, op)
-    print("Caption:", caption)
+    print("Description:", caption)
